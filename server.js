@@ -12,6 +12,9 @@ app.get("/api", (req, res) =>{
     res.json({"users":["userOne", "userTwo", "userTree","userFour", "userFive"]})
 })
 
+// dominant_colors 값을 저장할 변수
+let dominantColors = [];
+
 // dominant_colors 값을 받아서 저장하는 엔드포인트
 app.post('/api/dominant-colors', (req, res) => {
   const { dominant_colors } = req.body;
